@@ -19,6 +19,6 @@ app.get('*', function(req, res) {
     res.render('pages/404');
 });
 
-http.listen(80, function(){
-    console.log('listening on localhost');
+http.listen(4000, function(){
+    console.log('listening on localhost:' + 4000);
 });
