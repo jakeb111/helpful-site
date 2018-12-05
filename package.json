@@ -1,6 +1,6 @@
 {
   "name": "helpfulsite",
-  "version": "0.1.0", 
+  "version": "0.1.0",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
