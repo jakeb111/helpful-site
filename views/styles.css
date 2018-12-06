@@ -8,3 +8,10 @@
 body {
     font-family: 'Oxygen', sans-serif;
 }
+
+footer {
+    position: absolute;
+    width: 100vw;
+    background-color: gray;
+    bottom: 0;
+}
