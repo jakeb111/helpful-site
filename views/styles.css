@@ -7,4 +7,29 @@
 
 body {
     font-family: 'Oxygen', sans-serif;
+    background-color: rgb(92, 92, 92); /*Lets get better colors please*/
+}
+
+header {
+    width: 100vw; /* vw or view width is always the best to use when not in another element*/
+    height: 50px;
+    background-color: aqua;
+    text-align: center;
+    position: fixed;
+}
+
+header ul li {
+    display: inline;
+    margin: 35px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20pt;
+}
+
+header ul li a:hover {
+    transition: 0.25s;
+    color: red;
 }
