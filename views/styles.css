@@ -87,3 +87,18 @@ a {
     border: 2px solid #868686;
     border-radius: 5px;
 }
+
+#flashitButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: black 2px dotted;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: purple;
+}
+
+#flashitButton:hover {
+    -webkit-animation: flash linear 0.1s infinite;
+    animation: flash linear 0.1s infinite;
+}
