@@ -17,6 +17,10 @@ app.get('/', function(req, res){
     res.render('pages/index');
 });
 
+app.get('/resources', function(req, res){
+    res.render('pages/resources');
+})
+
 app.get('*', function(req, res) {
     res.render('pages/404');
 });
