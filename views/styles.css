@@ -64,7 +64,21 @@ header ul li a:hover {
 a {
     text-decoration: none;
 }
-
+.flashit{
+    color:#f2f;
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 1s infinite;
+}
+@keyframes flash {
+    0% { opacity: 1; } 
+    50% { opacity: .1; } 
+    100% { opacity: 1; }
+}
+@-webkit-keyframes flash {
+    0% { opacity: 1; } 
+    50% { opacity: .1; } 
+    100% { opacity: 1; }
+}
 .code {
     display: inline-block;
     background-color: #acacac;
