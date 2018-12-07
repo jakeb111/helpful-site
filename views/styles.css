@@ -66,18 +66,18 @@ a {
 }
 .flashit{
     color:rgb(49, 34, 255);
-    -webkit-animation: flash linear 1s infinite;
-    animation: flash linear 1s infinite;
+    -webkit-animation: flash linear 0.1s infinite;
+    animation: flash linear 0.1s infinite;
 }
 @keyframes flash {
-    0% { opacity: 1; } 
-    50% { opacity: .1; } 
-    100% { opacity: 1; }
+    0% { background-color: #f00; } 
+    50% { background-color: #0f0; } 
+    100% { background-color: #00f; }
 }
 @-webkit-keyframes flash {
-    0% { opacity: 1; } 
-    50% { opacity: .1; } 
-    100% { opacity: 1; }
+    0% { background-color: #f00; } 
+    50% { background-color: #0f0; } 
+    100% { background-color: #00f; }
 }
 .code {
     display: inline-block;
