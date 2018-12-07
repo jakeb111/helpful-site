@@ -32,7 +32,6 @@ header ul li {
 }
 
 header ul li a {
-    text-decoration: none;
     color: #ffffff;
     font-size: 20pt;
 }
@@ -44,6 +43,26 @@ header ul li a:hover {
 
 .main {
     padding: 10px;
+}
+
+.main ul {
+    margin-left: 15px;
+}
+
+.main a {
+    color: #000f64;
+}
+
+.main a:visited {
+    color: #000f64;
+}
+
+.main a:active {
+    color: #000f64;
+}
+
+a {
+    text-decoration: none;
 }
 
 .code {
