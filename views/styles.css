@@ -101,4 +101,5 @@ a {
 #flashitButton:hover {
     -webkit-animation: flash linear 0.1s infinite;
     animation: flash linear 0.1s infinite;
+    cursor: crosshair;
 }
