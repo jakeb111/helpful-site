@@ -65,7 +65,7 @@ a {
     text-decoration: none;
 }
 .flashit{
-    color:#f2f;
+    color:rgb(49, 34, 255);
     -webkit-animation: flash linear 1s infinite;
     animation: flash linear 1s infinite;
 }
