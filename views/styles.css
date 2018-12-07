@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 * {
     margin: 0;
@@ -6,23 +6,24 @@
 }
 
 body {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Inconsolata', monospace;
+    background-color: #ffffff;
 }
 
 footer {
     position: absolute;
     width: 100vw;
-    background-color: gray;
+    background-color: #000f64;
     bottom: 0;
-    background-color: rgb(92, 92, 92); /*Lets get better colors please*/
+    color: #ffffff;
 }
 
 header {
-    width: 100vw; /* vw or view width is always the best to use when not in another element*/
+    font-weight: bold;
+    width: 100vw;
     height: 50px;
-    background-color: aqua;
+    background-color: #000f64;
     text-align: center;
-    position: fixed;
 }
 
 header ul li {
@@ -32,11 +33,24 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
     font-size: 20pt;
 }
 
 header ul li a:hover {
-    transition: 0.25s;
-    color: red;
+    transition: 0.1s;
+    color: #aaa3ff;
+}
+
+.main {
+    padding: 10px;
+}
+
+.code {
+    display: inline-block;
+    background-color: #acacac;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #868686;
+    border-radius: 5px;
 }
