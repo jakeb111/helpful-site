@@ -8,8 +8,28 @@
 body {
     font-family: 'Inconsolata', monospace;
     background-color: #ffffff;
+    
 }
 
+#side-menu {
+    position: absolute;
+    height: calc(100% - 150px);
+    width: 200px;
+    background-color: #2400c2;
+    position: fixed;
+    
+}
+#side-menu ul li a:hover{
+    transition: 0.1s;
+    background-color: #aaa3ff;
+}
+
+#side-menu ul li a{
+    width: 100%
+}
+#side-menu ul li {
+    width: 85%
+}
 footer {
     position: absolute;
     width: 100vw;
@@ -25,7 +45,6 @@ header {
     background-color: #000f64;
     text-align: center;
 }
-
 header ul li {
     display: inline;
     margin: 35px;
@@ -42,7 +61,9 @@ header ul li a:hover {
 }
 
 .main {
+    position: fixed;
     padding: 10px;
+    left: 200px;
 }
 
 .main ul {
