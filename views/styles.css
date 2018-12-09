@@ -12,10 +12,12 @@ body {
 }
 
 #side-menu {
+    
     position: absolute;
     height: calc(100% - 150px);
     width: 200px;
-    background-color: #2400c2;
+    /*background-color: #2400c2;*/
+    background-color: rgb(43, 43, 43);
     position: fixed;
     
 }
@@ -23,9 +25,15 @@ body {
     transition: 0.1s;
     background-color: #aaa3ff;
 }
-
+#side-menu ul li h1 b {
+    margin-left: 30px;
+    color: #ffffff;
+    left: 300px;
+    top: 10px;
+}
 #side-menu ul li a{
-    width: 100%
+    width: 100%;
+    color:  #2400c2;
 }
 #side-menu ul li {
     width: 85%
