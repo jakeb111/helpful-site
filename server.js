@@ -12,14 +12,14 @@ app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views/'));
-
+console.log(path.join(__dirname, 'views/'))
 app.get('/', function(req, res){
     res.render('pages/index');
 });
 
 app.get('/resources', function(req, res){
     res.render('pages/resources');
-})
+});
 
 app.get('*', function(req, res) {
     res.render('pages/404');
