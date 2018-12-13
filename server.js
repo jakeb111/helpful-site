@@ -59,8 +59,8 @@ app.use(function(req, res, next){
                         body = JSON.parse(body);
                         lat = body.latitude;
                         lon = body.longitude;
+                        connection.query('INSERT INTO ips (ip, lat, lon) VALUES ("'+ip+'", "'+lat+'", "'+lon+'");');
                     });
-                    connection.query('INSERT INTO ips (ip, lat, lon) VALUES ("'+ip+'", "'+lat+'", "'+lon+'");');
                 }catch(err){
                     console.log(err);
                 }
