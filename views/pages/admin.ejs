@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Admin Page</title>
+        <% include ../partials/imports.ejs %>
+    </head>
+    <script>
+        function logout(){
+            $.ajax({
+                url: "./logout"
+            })
+            .done(function(){
+                location.href = location.href; //reloads page
+            })
+        }
+    </script>
+    <body>
+        <header>
+            <%- include ../partials/header.ejs %>
+        </header>
+        
+        <% if(loggedIn != true){ %>
+            <form action="./admin" method="post">
+                <input type="text" name="username"/>
+                <input type="password" name="password"/>
+                <input type="submit" value="Login"/>
+            </form>
+        <% }else{ %>
+            <h1>Welcome</h1>
+            <button onclick="logout()">Logout</button>
+        <% } %>
+
+        <footer>
+            <%- include ../partials/footer.ejs %>
+        </footer>
+    </body>
+</html>
