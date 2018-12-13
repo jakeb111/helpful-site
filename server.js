@@ -7,12 +7,13 @@ var mysql = require('mysql');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
+var request = require('request')
 
 var connection = mysql.createConnection({
     host     : '66.42.118.220',
     user     : 'root',
     port     :  3306,
-    password : '*****',
+    password : 'jakebtarrrishmarc',
     database : 'helpsite'
 });
 connection.connect();
@@ -53,7 +54,13 @@ app.use(function(req, res, next){
             if (err) throw err;
             if(res.length == 0 && ip != "1" && ip != "127.0.0.1"){
                 try{
-                    connection.query('INSERT INTO ips (ip) VALUES ("'+ip+'");');
+                    var lat, lon;
+                    request('http://api.ipstack.com/'+ip+"?access_key=2fb29968291fe43fca01b482519685db&fields=latitude,longitude", function (error, response, body) {
+                        body = JSON.parse(body);
+                        lat = body.latitude;
+                        lon = body.longitude;
+                    });
+                    connection.query('INSERT INTO ips (ip, lat, lon) VALUES ("'+ip+'", "'+lat+'", "'+lon+'");');
                 }catch(err){
                     console.log(err);
                 }
