@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
     host     : '66.42.118.220',
     user     : 'root',
     port     :  3306,
-    password : 'jakebtarrrishmarc',
+    password : '*****',
     database : 'helpsite'
 });
 connection.connect();
