@@ -3,6 +3,8 @@
     <head>
         <title>Admin Page</title>
         <% include ../partials/imports.ejs %>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd-IgsRmEAmreJIJDoQAwY01j9qPyai3o&callback=initMap"></script>
     </head>
     <script>
         function logout(){
@@ -11,6 +13,18 @@
             })
             .done(function(){
                 location.href = location.href; //reloads page
+            })
+        }
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: {lat: 0, lng: 0}});
+            $.ajax({
+                url: "./ips"
+            })
+            .done(function(res){
+                for(var i = 0; i < res.length; i++){
+                    var marker = new google.maps.Marker({position: {lat: parseFloat(res[i].lat), lng: parseFloat(res[i].lon)}, map: map});
+                }
             })
         }
     </script>
@@ -27,6 +41,7 @@
             </form>
         <% }else{ %>
             <h1>Welcome</h1>
+            <div id="map" style="width: 100%; height: 300px;"></div>
             <button onclick="logout()">Logout</button>
         <% } %>
 

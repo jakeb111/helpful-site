@@ -98,6 +98,12 @@ app.post('/admin', function(req, res, next){
     }
 })
 
+app.get('/ips', function(req, res, next){
+    connection.query('select * from ips', function(err, response){
+        res.send(response)
+    });
+})
+
 app.get('/logout', function(req, res, next){
     req.session.destroy();
     res.render('pages/admin', {loggedIn: false});
