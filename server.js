@@ -97,7 +97,6 @@ app.get('/logout', function(req, res, next){
 })
 
 app.get('*', function(req, res, next) {
-    load(req)
     res.render('pages/404');
 });
 
