@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>JavaScript Tutorial</title>
+        <% include ../partials/imports.ejs %>
+    </head>
+
+    <body>
+        <header>
+            <% include ../partials/header.ejs %>
+        </header>
+
+        <%- include ../partials/sideMenu.ejs %>
+        <div class="main">
+            <h1>JavaScript</h1>
+            <h2>Background</h2>
+            <p>
+                Created in 1995, JavaScript(JS) is a lightweight programming language usually used for the web. Other applications
+                can be run with JS with the help of libraries such as Node.js.
+            </p></br>
+            <h3>Standardization</h3>
+            <p>
+                How do so many browsers work is JS?
+                JS has a standard called ECMAScript. This standard gets updated every one or two years that browsers
+                implement. These new standards include functions for abstraction and other syntax changes. Although there
+                is a standard, there are also other functions that you may use but will not be supported by all browswers
+                except for popular ones. Some of these can be found 
+                <a style='color: #000f64' href='https://github.com/sergeysova/nonstandard.js?files=1'>here</a>
+                .
+            </p>
+            </br>
+            <h2>Getting Started with JavaScript</h2>
+            <p>Getting started with JavaScript is as easy as creating a file and typing 8 lines of code.</p>
+            <p class='code'>-----------------------
+                index.html
+                -----------------------
+                &#x3C;html&#x3E;
+                    &#x3C;head&#x3E;
+                        &#x3C;title&#x3E;JavaScript Tutorial&#x3C;/title&#x3E;
+                        &#x3C;script&#x3E;
+                            console.log(&#x22;Hello World!&#x22;);
+                        &#x3C;/script&#x3E;
+                    &#x3C;/head&#x3E;
+                &#x3C;/html&#x3E;
+            </p>
+            <p>
+                Ok! Now that you have your file and you code, double click the file and it will open in your browser.
+                Don't see anything? Don't worry, this is expected.
+                All you need to do is press f12 or right click and select inspect element(Chrome or Firefox prefered).
+                Then make sure you are on the console tab. If you are you will see a message that says "Hello World!"
+            </p>
+        </div>
+
+        <footer>
+            <% include ../partials/footer.ejs %>
+        </footer>
+    </body>
+
+</html>

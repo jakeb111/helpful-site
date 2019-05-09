@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Python Tutorial</title>
+        <% include ../partials/imports.ejs %>
+    </head>
+
+    <body>
+        <header>
+            <% include ../partials/header.ejs %>
+        </header>
+
+        <%- include ../partials/sideMenu.ejs %>
+        <div class="main">
+            <h1>Python</h1>
+            <h2>Background</h2>
+            <p>
+                Python was created in 1990 by Guido van Rossum. It emphisizes code
+                readability with its notable use of significant whitespace. Python
+                also has a strict style guide for Python code found
+                <a style='color: #000f64' href='https://www.python.org/dev/peps/pep-0008/#introduction'>here</a>.
+            </p></br>
+            <h2>Getting Started with Python</h2>
+            <p>Getting started with Python is as easy as creating a file and typing 1 line of code.</p>
+            <p class='code'>-----
+                program.py
+                -----
+                print('Hello World!')
+            </p>
+            <p>
+                Now all you have to do is start a terminal and type 'py program.py' to see the output of "Hello World!"
+            </p>
+        </div>
+
+        <footer>
+            <% include ../partials/footer.ejs %>
+        </footer>
+    </body>
+
+</html>
